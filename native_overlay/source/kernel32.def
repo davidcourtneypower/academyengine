@@ -1,0 +1,20 @@
+LIBRARY KERNEL32.dll
+EXPORTS
+CloseHandle=KERNEL32.CloseHandle
+Sleep=KERNEL32.Sleep
+GetCurrentProcessId=KERNEL32.GetCurrentProcessId
+CreateFileA=KERNEL32.CreateFileA
+ReadFile=KERNEL32.ReadFile
+WriteFile=KERNEL32.WriteFile
+GetFileSize=KERNEL32.GetFileSize
+GetEnvironmentVariableA=KERNEL32.GetEnvironmentVariableA
+CreateMutexA=KERNEL32.CreateMutexA
+GetLastError=KERNEL32.GetLastError
+MultiByteToWideChar=KERNEL32.MultiByteToWideChar
+
+GetFileTime=KERNEL32.GetFileTime
+MoveFileExA=KERNEL32.MoveFileExA
+GetTickCount=KERNEL32.GetTickCount
+GetCurrentThreadId=KERNEL32.GetCurrentThreadId
+GetModuleHandleA=KERNEL32.GetModuleHandleA
+ExitProcess=KERNEL32.ExitProcess

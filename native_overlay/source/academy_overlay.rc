@@ -1,0 +1,33 @@
+// AcademyOverlayHost.exe: Windows file details (Properties > Details) and manifest (v1.0.5; one program since v1.0.6).
+#define VER 1,0,6,0
+#define VERSTR "1.0.6"
+1 VERSIONINFO
+FILEVERSION VER
+PRODUCTVERSION VER
+FILEFLAGSMASK 0x3fL
+FILEFLAGS 0x0L
+FILEOS 0x40004L
+FILETYPE 0x1L
+FILESUBTYPE 0x0L
+BEGIN
+  BLOCK "StringFileInfo"
+  BEGIN
+    BLOCK "080904b0"
+    BEGIN
+      VALUE "CompanyName", "FC27 Academy Engine (open source mod)"
+      VALUE "FileDescription", "FC27 Academy Engine overlay (shows the overlay above FC27; never touches the game process)"
+      VALUE "FileVersion", VERSTR
+      VALUE "InternalName", "AcademyOverlayHost"
+      VALUE "LegalCopyright", "FC27 Academy Engine authors. Source code in native_overlay\\source."
+      VALUE "OriginalFilename", "AcademyOverlayHost.exe"
+      VALUE "ProductName", "FC27 Academy Engine"
+      VALUE "ProductVersion", VERSTR
+    END
+  END
+  BLOCK "VarFileInfo"
+  BEGIN
+    VALUE "Translation", 0x809, 1200
+  END
+END
+
+1 24 "overlay_host.manifest"

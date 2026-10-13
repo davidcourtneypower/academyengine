@@ -1,0 +1,46 @@
+[size=5][b]FC27 Academy Engine[/b][/size]
+[i]Realistic PlayStyle, PlayStyle+ and Role++ development for the players your career generates.[/i]
+
+In FC27, youth academy players and regens mostly keep the PlayStyles they were born with. Academy Engine changes that: as a generated player's attributes really grow, he works towards the PlayStyles, PlayStyle+ and Role++ that suit his game, at a realistic pace and within lifetime limits. An in-game overlay shows exactly how close every player is and why.
+
+[size=4][b]Features[/b][/size]
+[list]
+[*][b]Earned development[/b]: progress comes from real attribute growth across in-game days, with waiting periods between awards. Nothing is handed out at random.
+[*][b]PlayStyles, PlayStyle+ and Role++[/b], matched to each player's position and attributes.
+[*][b]Starting PlayStyles[/b] for newly generated players.
+[*][b]Lifetime limits[/b], so not every prospect becomes a superstar.
+[*][b]Optional decline with age[/b] (off by default): from a personal age between 30 and 40, players whose key attributes fall can lose PlayStyles, and PlayStyle+ drops back to PlayStyle first.
+[*][b]In-game overlay[/b] (F8 or L3+R3): dashboard, searchable player list with filters, each player's development paths and timeline, an events feed, and settings.
+[*][b]Save-aware[/b]: loading an older save puts Academy Engine back where it was at that save.
+[*][b]Real players are never touched.[/b] Only players FC27 generates during your career are changed.
+[*][b]Verified writes[/b]: every change goes through Live Editor and is checked before it counts.
+[/list]
+
+[size=4][b]Requirements[/b][/size]
+[list]
+[*]EA SPORTS FC 27 (PC), Borderless or Windowed display mode
+[*]FC 27 Live Editor (tested with 27.1.x)
+[*]Nothing else: Python and all libraries are included.
+[*]If you run Live Editor as administrator, the launcher offers to restart Academy Engine as administrator too (one click, or automatically).
+[/list]
+
+[size=4][b]Installation[/b][/size]
+[list=1]
+[*]Start FC27 through Live Editor once, then close it.
+[*]Extract the FC27_Academy_Engine folder somewhere you can write to (for example Documents, not Program Files).
+[*]Run [b]FC27 Academy Engine.bat[/b] and keep the launcher open while you play.
+[*]Start FC27 through Live Editor, load your career and press F8.
+[/list]
+Full instructions, uninstall steps and troubleshooting are in README.txt.
+
+[size=4][b]Compatibility[/b][/size]
+Do not combine with other mods that change generated players' PlayStyles. With [b]Total Career Overhaul[/b], set [PlayStyles] ENABLED = false in its config.ini; its other features work alongside Academy Engine. Not compatible with FC 27 Dynamic PlayStyle Generator.
+
+[size=4][b]About the overlay program[/b][/size]
+The overlay is drawn by a separate small program (AcademyOverlayHost.exe). It never injects anything into FC27.exe. Its source code is included in the download.
+
+[size=4][b]Support[/b][/size]
+When reporting a problem please include your FC27 and Live Editor versions and the logs folder from %LOCALAPPDATA%\FC27AcademyEngine. See README.txt.
+
+[size=4][b]Credits[/b][/size]
+Built on FC 27 Live Editor. Includes Python, Qt for Python (PySide6), psutil and Pillow; see THIRD_PARTY_NOTICES.txt.

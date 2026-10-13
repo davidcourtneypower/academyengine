@@ -1,0 +1,36 @@
+{
+  "development": {
+    "playstyle_progression_speed": 1.0,
+    "playstyle_plus_progression_speed": 1.0,
+    "role_progression_speed": 1.0,
+    "playstyle_plus_eligibility_multiplier": 1.0
+  },
+  "production": {
+    "normal_playstyle_cooldown_days": 120,
+    "playstyle_plus_cooldown_days": 180,
+    "role_upgrade_cooldown_days": 120,
+    "normal_playstyle_threshold": 100.0,
+    "playstyle_plus_threshold": 180.0,
+    "newgen_enrichment_per_checkpoint": 4,
+    "max_total_changes_per_checkpoint": 12,
+    "max_normal_playstyles_per_checkpoint": 6,
+    "max_playstyle_plus_per_checkpoint": 3,
+    "max_role_transactions_per_checkpoint": 3,
+    "prioritize_user_team_processing": true,
+    "debug_stress_mode": false
+  },
+  "notifications": {
+    "overlay_enabled": true,
+    "playstyle_gained": true,
+    "playstyle_plus_gained": true,
+    "role_upgraded": true,
+    "only_user_team": true,
+    "popup_seconds": 6,
+    "playstyle_lost": true
+  },
+  "decline": {
+    "playstyle_loss_enabled": false,
+    "playstyle_plus_loss_enabled": false,
+    "decline_speed": 1.0
+  }
+}

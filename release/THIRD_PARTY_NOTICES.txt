@@ -1,0 +1,30 @@
+THIRD-PARTY SOFTWARE INCLUDED WITH FC27 ACADEMY ENGINE
+=====================================================
+
+The Windows release includes the following unmodified third-party software in the
+"runtime" folder. Each keeps its own licence; the full licence texts are included
+in the "runtime" folder: runtime\python\LICENSE.txt for Python, and runtime\licenses for
+the packages, with the LGPL v3 and GPL v3 texts in runtime\licenses.
+
+Python 3.12 (embeddable package)
+  Python Software Foundation License Version 2
+  https://www.python.org/
+
+PySide6 (Qt for Python) 6.12 and Qt 6 libraries, shiboken6
+  GNU Lesser General Public License v3 (LGPLv3)
+  https://www.qt.io/qt-for-python
+  These libraries are included as separate, unmodified files and are dynamically
+  loaded; you may replace them with other compatible versions. Their source code is
+  available from the Qt Project (https://code.qt.io/) and the Qt for Python project.
+  Parts of Qt not used by Academy Engine are left out of this download.
+
+psutil 7.2
+  BSD 3-Clause License
+  https://github.com/giampaolo/psutil
+
+Pillow 12.3
+  MIT-CMU License (HPND)
+  https://python-pillow.org/
+
+FC27 Academy Engine is not affiliated with or endorsed by Electronic Arts, the Python
+Software Foundation, The Qt Company or the authors of FC Live Editor.

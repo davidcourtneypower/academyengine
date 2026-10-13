@@ -1,0 +1,19 @@
+LIBRARY GDI32.dll
+EXPORTS
+CreateSolidBrush=GDI32.CreateSolidBrush
+DeleteObject=GDI32.DeleteObject
+SetBkMode=GDI32.SetBkMode
+SetTextColor=GDI32.SetTextColor
+CreatePen=GDI32.CreatePen
+SelectObject=GDI32.SelectObject
+Rectangle=GDI32.Rectangle
+CreateFontW=GDI32.CreateFontW
+CreateCompatibleDC=GDI32.CreateCompatibleDC
+CreateCompatibleBitmap=GDI32.CreateCompatibleBitmap
+DeleteDC=GDI32.DeleteDC
+BitBlt=GDI32.BitBlt
+SaveDC=GDI32.SaveDC
+RestoreDC=GDI32.RestoreDC
+IntersectClipRect=GDI32.IntersectClipRect
+Ellipse=GDI32.Ellipse
+GetTextExtentPoint32W=GDI32.GetTextExtentPoint32W

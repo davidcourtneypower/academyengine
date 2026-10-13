@@ -1,0 +1,514 @@
+{
+  "Acrobatic": {
+    "positions": [
+      "ST",
+      "LW",
+      "RW"
+    ],
+    "attributes": [
+      "agility",
+      "volleys"
+    ],
+    "aptitude": "shooting"
+  },
+  "Chip Shot": {
+    "positions": [
+      "ST",
+      "CAM",
+      "LW",
+      "RW"
+    ],
+    "attributes": [
+      "finishing",
+      "composure"
+    ],
+    "aptitude": "shooting"
+  },
+  "Dead Ball": {
+    "positions": [
+      "CAM",
+      "CM",
+      "LW",
+      "RW"
+    ],
+    "attributes": [
+      "freekickaccuracy",
+      "curve",
+      "shotpower"
+    ],
+    "aptitude": "passing"
+  },
+  "Finesse Shot": {
+    "positions": [
+      "ST",
+      "CAM",
+      "LW",
+      "RW"
+    ],
+    "attributes": [
+      "finishing",
+      "curve"
+    ],
+    "aptitude": "shooting"
+  },
+  "Gamechanger": {
+    "positions": [
+      "ST",
+      "CAM",
+      "LW",
+      "RW"
+    ],
+    "attributes": [
+      "composure",
+      "reactions",
+      "dribbling"
+    ],
+    "aptitude": "mentality"
+  },
+  "Low Driven Shot": {
+    "positions": [
+      "ST",
+      "LW",
+      "RW",
+      "CAM"
+    ],
+    "attributes": [
+      "finishing",
+      "shotpower"
+    ],
+    "aptitude": "shooting"
+  },
+  "Power Header": {
+    "positions": [
+      "ST",
+      "CB"
+    ],
+    "attributes": [
+      "headingaccuracy",
+      "strength",
+      "jumping"
+    ],
+    "aptitude": "physical"
+  },
+  "Power Shot": {
+    "positions": [
+      "ST",
+      "CAM",
+      "CM"
+    ],
+    "attributes": [
+      "shotpower",
+      "longshots"
+    ],
+    "aptitude": "shooting"
+  },
+  "Precision Header": {
+    "positions": [
+      "ST",
+      "CB"
+    ],
+    "attributes": [
+      "headingaccuracy",
+      "positioning"
+    ],
+    "aptitude": "shooting"
+  },
+  "Trivela": {
+    "positions": [
+      "CAM",
+      "CM",
+      "LW",
+      "RW",
+      "ST"
+    ],
+    "attributes": [
+      "curve",
+      "finishing",
+      "longpassing"
+    ],
+    "aptitude": "technique"
+  },
+  "Incisive Pass": {
+    "positions": [
+      "CM",
+      "CAM",
+      "CDM"
+    ],
+    "attributes": [
+      "vision",
+      "shortpassing"
+    ],
+    "aptitude": "passing"
+  },
+  "Inventive": {
+    "positions": [
+      "CM",
+      "CAM",
+      "LW",
+      "RW"
+    ],
+    "attributes": [
+      "vision",
+      "curve",
+      "ballcontrol"
+    ],
+    "aptitude": "passing"
+  },
+  "Long Ball Pass": {
+    "positions": [
+      "CM",
+      "CDM",
+      "CB"
+    ],
+    "attributes": [
+      "longpassing",
+      "vision"
+    ],
+    "aptitude": "passing"
+  },
+  "Pinged Pass": {
+    "positions": [
+      "CM",
+      "CDM",
+      "CB",
+      "CAM"
+    ],
+    "attributes": [
+      "shortpassing",
+      "shotpower"
+    ],
+    "aptitude": "passing"
+  },
+  "Tiki Taka": {
+    "positions": [
+      "CM",
+      "CAM",
+      "CDM"
+    ],
+    "attributes": [
+      "shortpassing",
+      "ballcontrol"
+    ],
+    "aptitude": "technique"
+  },
+  "Whipped Pass": {
+    "positions": [
+      "LB",
+      "RB",
+      "LW",
+      "RW"
+    ],
+    "attributes": [
+      "crossing",
+      "curve"
+    ],
+    "aptitude": "passing"
+  },
+  "First Touch": {
+    "positions": [
+      "ST",
+      "CAM",
+      "CM",
+      "LW",
+      "RW"
+    ],
+    "attributes": [
+      "ballcontrol",
+      "reactions"
+    ],
+    "aptitude": "technique"
+  },
+  "Flair": {
+    "positions": [
+      "CAM",
+      "LW",
+      "RW",
+      "ST"
+    ],
+    "attributes": [
+      "dribbling",
+      "agility",
+      "ballcontrol"
+    ],
+    "aptitude": "flair"
+  },
+  "Press Proven": {
+    "positions": [
+      "CM",
+      "CDM",
+      "CAM",
+      "ST"
+    ],
+    "attributes": [
+      "ballcontrol",
+      "strength",
+      "composure"
+    ],
+    "aptitude": "mentality"
+  },
+  "Rapid": {
+    "positions": [
+      "LW",
+      "RW",
+      "ST",
+      "LB",
+      "RB"
+    ],
+    "attributes": [
+      "acceleration",
+      "sprintspeed"
+    ],
+    "aptitude": "pace"
+  },
+  "Technical": {
+    "positions": [
+      "LW",
+      "RW",
+      "CAM",
+      "CM"
+    ],
+    "attributes": [
+      "dribbling",
+      "ballcontrol",
+      "agility"
+    ],
+    "aptitude": "technique"
+  },
+  "Trickster": {
+    "positions": [
+      "LW",
+      "RW",
+      "CAM"
+    ],
+    "attributes": [
+      "dribbling",
+      "agility"
+    ],
+    "aptitude": "flair"
+  },
+  "Aerial Fortress": {
+    "positions": [
+      "CB",
+      "GK"
+    ],
+    "attributes": [
+      "headingaccuracy",
+      "jumping",
+      "strength"
+    ],
+    "aptitude": "defending"
+  },
+  "Anticipate": {
+    "positions": [
+      "CB",
+      "CDM",
+      "LB",
+      "RB"
+    ],
+    "attributes": [
+      "standingtackle",
+      "defensiveawareness"
+    ],
+    "aptitude": "defending"
+  },
+  "Block": {
+    "positions": [
+      "CB",
+      "CDM"
+    ],
+    "attributes": [
+      "defensiveawareness",
+      "strength"
+    ],
+    "aptitude": "defending"
+  },
+  "Intercept": {
+    "positions": [
+      "CB",
+      "CDM",
+      "CM",
+      "LB",
+      "RB"
+    ],
+    "attributes": [
+      "interceptions",
+      "defensiveawareness"
+    ],
+    "aptitude": "defending"
+  },
+  "Jockey": {
+    "positions": [
+      "LB",
+      "RB",
+      "CB",
+      "CDM"
+    ],
+    "attributes": [
+      "agility",
+      "defensiveawareness",
+      "balance"
+    ],
+    "aptitude": "defending"
+  },
+  "Slide Tackle": {
+    "positions": [
+      "CB",
+      "LB",
+      "RB",
+      "CDM"
+    ],
+    "attributes": [
+      "slidingtackle",
+      "aggression"
+    ],
+    "aptitude": "defending"
+  },
+  "Aerial": {
+    "positions": [
+      "CB",
+      "ST",
+      "CDM"
+    ],
+    "attributes": [
+      "headingaccuracy",
+      "jumping",
+      "strength"
+    ],
+    "aptitude": "physical"
+  },
+  "Bruiser": {
+    "positions": [
+      "CB",
+      "CDM",
+      "CM"
+    ],
+    "attributes": [
+      "strength",
+      "aggression",
+      "standingtackle"
+    ],
+    "aptitude": "physical"
+  },
+  "Enforcer": {
+    "positions": [
+      "CB",
+      "CDM",
+      "CM"
+    ],
+    "attributes": [
+      "strength",
+      "aggression",
+      "stamina"
+    ],
+    "aptitude": "physical"
+  },
+  "Long Throw": {
+    "positions": [
+      "LB",
+      "RB",
+      "CB"
+    ],
+    "attributes": [
+      "strength"
+    ],
+    "aptitude": "physical"
+  },
+  "Quick Step": {
+    "positions": [
+      "LW",
+      "RW",
+      "ST",
+      "CAM"
+    ],
+    "attributes": [
+      "acceleration",
+      "agility"
+    ],
+    "aptitude": "pace"
+  },
+  "Relentless": {
+    "positions": [
+      "CM",
+      "CDM",
+      "LB",
+      "RB",
+      "LW",
+      "RW"
+    ],
+    "attributes": [
+      "stamina",
+      "aggression"
+    ],
+    "aptitude": "physical"
+  },
+  "Cross Claimer": {
+    "positions": [
+      "GK"
+    ],
+    "attributes": [
+      "gkreflexes",
+      "gkpositioning"
+    ],
+    "aptitude": "goalkeeping"
+  },
+  "Deflector": {
+    "positions": [
+      "GK"
+    ],
+    "attributes": [
+      "gkreflexes",
+      "gkpositioning"
+    ],
+    "aptitude": "goalkeeping"
+  },
+  "Far Reach": {
+    "positions": [
+      "GK"
+    ],
+    "attributes": [
+      "gkreflexes",
+      "gkpositioning"
+    ],
+    "aptitude": "goalkeeping"
+  },
+  "Far Throw": {
+    "positions": [
+      "GK"
+    ],
+    "attributes": [
+      "gkreflexes",
+      "gkpositioning"
+    ],
+    "aptitude": "goalkeeping"
+  },
+  "Footwork": {
+    "positions": [
+      "GK"
+    ],
+    "attributes": [
+      "gkreflexes",
+      "gkpositioning"
+    ],
+    "aptitude": "goalkeeping"
+  },
+  "Quick Reflexes": {
+    "positions": [
+      "GK"
+    ],
+    "attributes": [
+      "gkreflexes",
+      "gkpositioning"
+    ],
+    "aptitude": "goalkeeping"
+  },
+  "Rush Out": {
+    "positions": [
+      "GK"
+    ],
+    "attributes": [
+      "gkreflexes",
+      "gkpositioning"
+    ],
+    "aptitude": "goalkeeping"
+  }
+}
