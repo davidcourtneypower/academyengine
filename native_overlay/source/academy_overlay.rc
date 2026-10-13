@@ -1,6 +1,6 @@
 // AcademyOverlayHost.exe: Windows file details (Properties > Details) and manifest (v1.0.5; one program since v1.0.6).
-#define VER 1,0,6,0
-#define VERSTR "1.0.6"
+#define VER 1,0,7,0
+#define VERSTR "1.0.7"
 1 VERSIONINFO
 FILEVERSION VER
 PRODUCTVERSION VER

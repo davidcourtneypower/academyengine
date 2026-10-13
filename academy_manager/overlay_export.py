@@ -353,7 +353,7 @@ def _publish_overlay_state(activity:dict|None=None,runtime_override:dict|None=No
     # v1.24 publication is lifecycle-driven.  A career UID existing somewhere on disk
     # is not enough: only an atomically completed READY generation is navigable.
     ctl_on,ctl_combo,ctl_mask=controller_settings(mgr)
-    lines=['VERSION=1.0.6',f'GAME_PID={pid}',f'GAME_RUNNING={1 if game_running else 0}',f'THEME={theme}',f'HOTKEY={_clean(mgr.get("overlay_hotkey","F8"))}',f'CONTROLLER_ENABLED={1 if ctl_on else 0}',f'CONTROLLER_COMBO={ctl_mask}',f'CONTROLLER_COMBO_NAME={_clean(ctl_combo)}',f'RUNTIME_STATE={_clean(lstate)}']
+    lines=['VERSION=1.0.7',f'GAME_PID={pid}',f'GAME_RUNNING={1 if game_running else 0}',f'THEME={theme}',f'HOTKEY={_clean(mgr.get("overlay_hotkey","F8"))}',f'CONTROLLER_ENABLED={1 if ctl_on else 0}',f'CONTROLLER_COMBO={ctl_mask}',f'CONTROLLER_COMBO_NAME={_clean(ctl_combo)}',f'RUNTIME_STATE={_clean(lstate)}']
     for k in ('bg','panel','panel_alt','border','text','text_strong','muted','accent','ps','plus','role','info','good','warn','bad'):
         lines.append(f'COLOR_{k.upper()}={t[k]}')
 

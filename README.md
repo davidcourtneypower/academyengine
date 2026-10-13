@@ -1,8 +1,8 @@
-# FC27 Academy Engine v1.0.6
+# FC27 Academy Engine v1.0.7
 
 A Career Mode development engine for FC27. Players you track grow PlayStyles, PlayStyle+ and Role++ from how they actually play, within lifetime limits, and in later years can lose them again as they age. Everything runs outside FC27.exe: a thin Live Editor Lua adapter reads the game and makes verified writes, a Python engine decides, and an external overlay shows it all over the game.
 
-See docs/RELEASE_NOTES_V103.md for the latest release. Players get release/README.txt instead of this file. Preserve existing engine data when upgrading; no reset is required. Developer orientation: docs/DEVELOPER_CONTEXT.md.
+**Building it yourself, and what it does on your PC: see [BUILDING.md](BUILDING.md).** Release notes for each version are in docs/RELEASE_NOTES_V*.md. Players get release/README.txt instead of this file. Preserve existing engine data when upgrading; no reset is required. Developer orientation: docs/DEVELOPER_CONTEXT.md.
 
 ## Features (current)
 
@@ -46,6 +46,10 @@ There is no fixed Live Editor install path. The launcher finds Live Editor autom
 This build contains no pre-v1.24 migration/import layer. Old generation/portrait engines, old adapter contracts, test write/restore handoffs, old backup/export helpers and unreachable legacy modules have been removed from the shipping tree.
 
 ## Version history
+
+## v1.0.7 build from source
+
+- BUILDING.md (build steps, where each file comes from, what the mod does on a PC); Windows-friendly reproducible overlay build (`tools/build_overlay.py`); the release build compiles the overlay and prints hashes. See docs/RELEASE_NOTES_V107.md.
 
 ## v1.0.6 the overlay is one program
 

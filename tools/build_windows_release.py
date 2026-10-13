@@ -16,7 +16,9 @@ Steps
 4. Package install records (*.dist-info) are removed and their licence texts moved to
    runtime/licenses/<package>/ (v1.0.5). Nothing Academy Engine runs reads them, and with them in
    the zip VirusTotal identified the whole download as the "pillow" Python package.
-5. tools/make_release.py builds the zip with runtime/ inside.
+5. The overlay program (native_overlay/AcademyOverlayHost.exe) is rebuilt from its C source with
+   tools/build_overlay.py when LLVM is installed (v1.0.7), so the release carries what you built.
+6. tools/make_release.py builds the zip with runtime/ inside.
 
 Run it on the release PC once per release. Re-running reuses the download in OUT_DIR/cache.
 """
@@ -25,6 +27,7 @@ import argparse, hashlib, io, os, shutil, struct, subprocess, sys, urllib.reques
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(Path(__file__).resolve().parent))   # tools/: build_overlay
 PY_VERSION = "3.12.10"                  # last 3.12 release with Windows binaries
 PY_TAG = "312"
 PY_URL = f"https://www.python.org/ftp/python/{PY_VERSION}/python-{PY_VERSION}-embed-amd64.zip"
@@ -223,6 +226,14 @@ def main() -> int:
     build_runtime(runtime, get_python_zip(a.python_zip, out / "cache", a.python_sha256))
     total = sum(f.stat().st_size for f in runtime.rglob("*") if f.is_file())
     print(f"runtime ready: {total / 1e6:.0f} MB")
+    try:                                                       # v1.0.7: build the overlay here from source
+        import build_overlay
+        overlay_sha = build_overlay.build()
+    except SystemExit as exc:
+        if "not found" not in str(exc):
+            raise
+        overlay_sha = hashlib.sha256((ROOT / "native_overlay" / "AcademyOverlayHost.exe").read_bytes()).hexdigest()
+        print(f"LLVM not installed: using the AcademyOverlayHost.exe already in native_overlay ({exc})")
     version = (ROOT / "VERSION.txt").read_text(encoding="utf-8").split()[0].lstrip("v")
     name = f"FC27_Academy_Engine_v{version}_Windows"
     subprocess.run([sys.executable, str(ROOT / "tools" / "make_release.py"), str(out),
@@ -230,6 +241,9 @@ def main() -> int:
     print("\n" + "=" * 72)
     print("Upload this file to Nexus Mods (the player download):")
     print(f"  {out / (name + '.zip')}")
+    zip_sha = hashlib.sha256((out / (name + ".zip")).read_bytes()).hexdigest()
+    print(f"  SHA-256 {zip_sha}")
+    print(f"AcademyOverlayHost.exe SHA-256 {overlay_sha}")
     print("Everything else in this folder (docs, tests, tools) is the developer project; do not upload it.")
     print("=" * 72)
     return 0

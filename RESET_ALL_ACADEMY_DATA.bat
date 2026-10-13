@@ -1,7 +1,7 @@
 @echo off
 setlocal
 cls
-echo FC27 Academy Engine v1.0.6 - Factory Reset
+echo FC27 Academy Engine v1.0.7 - Factory Reset
 echo.
 echo This deletes ALL Academy Engine state under:
 echo   %%LOCALAPPDATA%%\FC27AcademyEngine

@@ -126,7 +126,7 @@ def main() -> int:
     assert (rr.get("payload") or {}).get("exact_save_anchor",{}).get("status") == "RESTORED", (rr.get("payload") or {}).get("exact_save_anchor")
     assert top_ps_progress(rr) == 0.0, top_ps_progress(rr)
 
-    print("FC27 Academy Engine v1.0.6 self-test: PASS")
+    print("FC27 Academy Engine v1.0.7 self-test: PASS")
     print(f"  initial progress : {first_progress:.2f}%")
     print(f"  developed        : {grown_progress:.2f}%")
     print(f"  rewind restored  : {rewind_progress:.2f}%")

@@ -47,7 +47,7 @@ assert b'level="asInvoker"' in data
 src = (ROOT / "native_overlay/source/academy_overlay.c").read_text(encoding="utf-8")
 assert "void __stdcall OverlayMain(void){g_inst=GetModuleHandleA(NULL);ExitProcess(worker(NULL));}" in src
 assert "DllMain" not in src and "LoadLibraryA" not in src and "g_xget=XInputGetState;" in src
-assert "/entry:OverlayMain" in (ROOT / "tools/build_overlay.sh").read_text()
+assert "/entry:OverlayMain" in (ROOT / "tools/build_overlay.py").read_text()
 print("Program: Windows GUI, entry OverlayMain, file details, asInvoker manifest; controller via imported XInputGetState: PASS")
 
 from academy_manager import overlay_host as H

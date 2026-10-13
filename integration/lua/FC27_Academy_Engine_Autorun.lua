@@ -1,4 +1,4 @@
--- FC27 Academy Engine v1.0.6 bootstrap
+-- FC27 Academy Engine v1.0.7 bootstrap
 -- IMPORTANT: do not load the resident runtime during Live Editor autorun.
 -- Live Editor executes lua/autorun while its own startup/injection path is still
 -- finishing. Loading the DB-heavy Academy runtime here can stall that path.
@@ -52,7 +52,7 @@ local function mark(state,detail)
  pcall(function()
   local f=io.open(root.."\\le_bootstrap_seen.json","w")
   if not f then return end
-  f:write('{"version":"1.0.6","state":"'..esc(state)..'","timestamp":'..tostring(os.time())..',"detail":"'..esc(detail)..'"}')
+  f:write('{"version":"1.0.7","state":"'..esc(state)..'","timestamp":'..tostring(os.time())..',"detail":"'..esc(detail)..'"}')
   f:flush(); f:close()
  end)
 end
@@ -66,7 +66,7 @@ local function load_runtime(reason)
  if not root then
   loading=false
   mark("WAITING_FOR_RUNTIME","no_temp_root")
-  safe_log("FC27AE_V106_BOOTSTRAP_WAIT reason=no_temp_root")
+  safe_log("FC27AE_V107_BOOTSTRAP_WAIT reason=no_temp_root")
   return false
  end
  local runtime=root.."\\runtime_current.lua"
@@ -75,11 +75,11 @@ local function load_runtime(reason)
  loading=false
  if ok and active() then
   mark("RUNTIME_ACTIVE",reason)
-  safe_log("FC27AE_V106_BOOTSTRAP_OK reason="..tostring(reason))
+  safe_log("FC27AE_V107_BOOTSTRAP_OK reason="..tostring(reason))
   return true
  end
  mark("WAITING_FOR_CAREER_RUNTIME",tostring(err or "runtime_not_ready"))
- safe_log("FC27AE_V106_BOOTSTRAP_WAIT reason="..tostring(reason).." error="..tostring(err or "runtime_not_ready"))
+ safe_log("FC27AE_V107_BOOTSTRAP_WAIT reason="..tostring(reason).." error="..tostring(err or "runtime_not_ready"))
  return false
 end
 
@@ -100,17 +100,17 @@ if type(AddEventHandler)=="function" then
  if ok then
   if engine_enabled() then
    mark("AUTORUN_ARMED","post__CareerModeEvent")
-   safe_log("FC27AE_V106_AUTORUN_ARMED runtime=runtime_current.lua trigger=post__CareerModeEvent")
+   safe_log("FC27AE_V107_AUTORUN_ARMED runtime=runtime_current.lua trigger=post__CareerModeEvent")
   end
  else
   if engine_enabled() then
    mark("AUTORUN_ERROR","AddEventHandler:"..tostring(err))
-   safe_log("FC27AE_V106_AUTORUN_ERROR AddEventHandler="..tostring(err))
+   safe_log("FC27AE_V107_AUTORUN_ERROR AddEventHandler="..tostring(err))
   end
  end
 else
  if engine_enabled() then
   mark("AUTORUN_ERROR","AddEventHandler unavailable")
-  safe_log("FC27AE_V106_AUTORUN_ERROR AddEventHandler_unavailable")
+  safe_log("FC27AE_V107_AUTORUN_ERROR AddEventHandler_unavailable")
  end
 end

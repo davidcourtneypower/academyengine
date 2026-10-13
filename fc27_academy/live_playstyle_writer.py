@@ -332,7 +332,7 @@ def stage_bundle(root,world,normal_acquisition,plus_acquisition,newgen_enrichmen
     changes=tuple(_safe_change(e) for e in entries)
     cid='evobundle_'+uuid.uuid4().hex
     cs=make_changeset(save_uid,str(checkpoint_id),changes,mode='APPLY_VERIFIED'); cs=replace(cs,changeset_id=cid)
-    manifest={'schema':6,'version':'1.0.6','changeset_id':cid,'save_uid':save_uid,'career_uid':str(world.get('career_uid') or save_uid),'branch_id':str(world.get('branch_id') or ''),'storage_key':str(world.get('storage_key') or save_uid),'runtime_session':str(world.get('runtime_session') or ''),'checkpoint_id':str(checkpoint_id),'status':'STAGED','entries':entries,'holds':holds,'limits':{'total_fields':max_total,'normal':max_normal,'plus':max_plus,'role_transactions':max_role,'newgen':max_newgen}}
+    manifest={'schema':6,'version':'1.0.7','changeset_id':cid,'save_uid':save_uid,'career_uid':str(world.get('career_uid') or save_uid),'branch_id':str(world.get('branch_id') or ''),'storage_key':str(world.get('storage_key') or save_uid),'runtime_session':str(world.get('runtime_session') or ''),'checkpoint_id':str(checkpoint_id),'status':'STAGED','entries':entries,'holds':holds,'limits':{'total_fields':max_total,'normal':max_normal,'plus':max_plus,'role_transactions':max_role,'newgen':max_newgen}}
     _atomic_json(manifests/f'{cid}.json',manifest)
     # Mark queued newgen rows STAGED only after manifest is durable.
     if any(e.get('queue_id') or e.get('queue_ids') for e in entries):

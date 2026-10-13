@@ -1,4 +1,4 @@
--- FC27 Academy Engine v1.0.6 - thin Live Editor game adapter
+-- FC27 Academy Engine v1.0.7 - thin Live Editor game adapter
 -- Checkpoint capture remains read-only. A receipt-gated atomic evolution bundle may contain verified PlayStyle and Role writes.
 -- DAY_PASSED=15 consumes any ready transaction and emits/coalesces a live checkpoint snapshot.
 -- PREPARE_FOR_SAVE=28 is a durable reconciliation fallback; manual saves are not required for ordinary daily progression.
@@ -6,7 +6,7 @@
 -- from a release-specific token. A repeated dofile during the same FC27 process
 -- returns immediately instead of registering another CareerModeEvent handler.
 if _G.FC27AE_RUNTIME_CURRENT_STATE=="ACTIVE" then
- if type(Log)=="function" then pcall(Log,"FC27AE_V106_RUNTIME_REUSE state=ACTIVE") end
+ if type(Log)=="function" then pcall(Log,"FC27AE_V107_RUNTIME_REUSE state=ACTIVE") end
  return
 end
 -- A previous top-level load that aborted can leave LOADING behind. Career events
@@ -40,7 +40,7 @@ local function runtime_status(state,detail,uid)
  -- dispatch the first CareerModeEvent while FC27 is still mutating career tables.
  -- The UID is populated only after the startup-settle gate has completed.
  local suid=tostring(uid or active_save_uid or "DEFERRED")
- f:write('{"version":"1.0.6","state":"'..tostring(state)..'","timestamp":'..tostring(os.time())..',"runtime_session":"'..tostring(SESSION or "")..'","save_uid":"'..suid..'","detail":"'..d..'"}')
+ f:write('{"version":"1.0.7","state":"'..tostring(state)..'","timestamp":'..tostring(os.time())..',"runtime_session":"'..tostring(SESSION or "")..'","save_uid":"'..suid..'","detail":"'..d..'"}')
  f:flush();f:close()
 end
 local function safe_log(msg)
@@ -92,7 +92,7 @@ local startup_settle_events=0; local pending_initial_snapshot=false; local await
 local baselined_uid={}; local boundary_reason="INITIAL"; local boundary_count=0; local detached_logged=false; local detached_uid=nil
 local save_parent=nil; local save_parent_at=0; local inflight_since=0; local last_wait_log=0
 local active_ctx={career_uid="",branch_id="",storage_key="",runtime_session="",writes_held=true,reason="NO_CONTEXT"}
-local RUNTIME_TOKEN="v106_"..SESSION
+local RUNTIME_TOKEN="v107_"..SESSION
 _G.FC27AE_ACTIVE_RUNTIME_TOKEN=RUNTIME_TOKEN
 _G.FC27AE_ACTIVE_SYNC_CONSUMER_TOKEN=RUNTIME_TOKEN
 local function is_active_runtime() return _G.FC27AE_ACTIVE_RUNTIME_TOKEN==RUNTIME_TOKEN and _G.FC27AE_ACTIVE_SYNC_CONSUMER_TOKEN==RUNTIME_TOKEN end
@@ -771,6 +771,6 @@ end
 AddEventHandler("post__CareerModeEvent",OnCareerEvent)
 _G.FC27AE_RUNTIME_CURRENT_STATE="ACTIVE"
 runtime_status("ACTIVE_SETTLING","resident_ready_no_db_touch","DEFERRED")
-safe_log("FC27AE_UNIFIED_V106_READY session="..SESSION.." token="..RUNTIME_TOKEN.." startup=NO_NATIVE_ACCESS_UNTIL_CAREER_HUB events=DAY_PASSED:15_DEFERRED_SETTLED,PREPARE_FOR_SAVE:28_RECONCILE batch=48 adapter=SNAPSHOT_PLUS_RECEIPT_GATED_WRITES production_sync=RECEIPT_GATED storage=APP_PERSISTENT_BRANCH_STATE save_switch=UID_PLUS_STATE_FINGERPRINT transport=STREAMED_ATOMIC_FILE realtime=HYBRID_DEFERRED_CACHED_TRACKED full_scan_days=7 native_growth=FC27")
+safe_log("FC27AE_UNIFIED_V107_READY session="..SESSION.." token="..RUNTIME_TOKEN.." startup=NO_NATIVE_ACCESS_UNTIL_CAREER_HUB events=DAY_PASSED:15_DEFERRED_SETTLED,PREPARE_FOR_SAVE:28_RECONCILE batch=48 adapter=SNAPSHOT_PLUS_RECEIPT_GATED_WRITES production_sync=RECEIPT_GATED storage=APP_PERSISTENT_BRANCH_STATE save_switch=UID_PLUS_STATE_FINGERPRINT transport=STREAMED_ATOMIC_FILE realtime=HYBRID_DEFERRED_CACHED_TRACKED full_scan_days=7 native_growth=FC27")
 -- No GetSaveUID, table access, player scan or snapshot is allowed at module load.
 -- The first baseline is scheduled only after later CareerModeEvents have settled.

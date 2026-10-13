@@ -1,3 +1,13 @@
+FC27 Academy Engine v1.0.7 build validation (2026-10-13)
+- tools/build_overlay.py (replaces build_overlay.sh): llvm-lib /def import libraries, llvm-rc, clang, lld-link /Brepro without /debug.
+  Two builds from different folders and at different times gave the same SHA-256 (clang/LLD 18.1.3, Ubuntu); no RSDS/PDB
+  reference or build path inside the program.
+- Full release build run here offline: the overlay was rebuilt by build_windows_release.py and the zip and overlay hashes printed.
+- BUILDING.md checked by test_v107 against the scripts (Python hash, locked packages, commands, write whitelist). 49/49 regression scripts PASS from a clean package copy.
+- Fixed: version bumps since v1.0.5 had changed two history comments in academy_overlay.c (restored to v1.0.4 / v1.0.6).
+- Not performed: a build on Windows with the official LLVM installer. The same LLVM version should give the same bytes; whether
+  the Windows LLVM 18.1 build matches this Ubuntu 18.1.3 build byte for byte is not known.
+
 FC27 Academy Engine v1.0.6 build validation (2026-10-12)
 - From the user's v1.0.5 rescan: zip typed "zip" (the Pillow misidentification is gone), 4/57; bundled AcademyOverlayHost.exe
   (v1.0.5, with file details) still 7/71, every other bundled file 0. The Go loader + DLL shape is the remaining trigger.

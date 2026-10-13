@@ -239,9 +239,9 @@ def main():
     except Exception as exc:
         runtime_status=f"ERROR detail={exc}"
     emit(f"FC27AE_LUA_RUNTIME {runtime_status}", flush=True)
-    emit(f'FC27AE_BRIDGE_SERVICE READY root={bridge.root} mode=V106_EXTERNAL_TRANSACTIONAL production=PLAYSTYLE+ROLE native=POTENTIAL+ATTRIBUTES+AGEING', flush=True)
+    emit(f'FC27AE_BRIDGE_SERVICE READY root={bridge.root} mode=V107_EXTERNAL_TRANSACTIONAL production=PLAYSTYLE+ROLE native=POTENTIAL+ATTRIBUTES+AGEING', flush=True)
     # Publish health immediately; the GUI should never sit in 'Starting' until the first poll cycle.
-    service.bridge.publish_state(protocol=1,service='READY',version='1.0.6',writes_locked=False,production_families=['PLAYSTYLE','PLAYSTYLE_PLUS','ROLE'],native_ownership=['POTENTIAL','ATTRIBUTES','AGEING'])
+    service.bridge.publish_state(protocol=1,service='READY',version='1.0.7',writes_locked=False,production_families=['PLAYSTYLE','PLAYSTYLE_PLUS','ROLE'],native_ownership=['POTENTIAL','ATTRIBUTES','AGEING'])
     _last_overlay_publish=0.0
     _last_engine_work=time.monotonic()
     _next_history_maintenance=time.monotonic()+60
